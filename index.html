@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Buatan Firman Gani</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit">Login</button>
+                <div id="loginError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until login) -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Welcome Animation -->
+        <div id="welcomeAnimation" class="welcome-animation">
+            <div class="stars"></div>
+            <div class="sun">
+                <div class="sun-core"></div>
+                <div class="sun-rays"></div>
+                <div class="welcome-text">
+                    <div class="welcome-line">Selamat Datang</div>
+                    <div class="welcome-line">di Web Buatan</div>
+                    <div class="welcome-line highlight">Firman Gani</div>
+                </div>
+            </div>
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <h1>Data Mahasiswa</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+
+        <!-- Add Data Form -->
+        <div class="add-data-section">
+            <button id="toggleFormBtn" class="toggle-form-btn">+ Tambah Data Baru</button>
+            <div id="addDataForm" class="add-data-form hidden">
+                <h3>Tambah Data Mahasiswa</h3>
+                <form id="dataForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="newNim">NIM:</label>
+                            <input type="text" id="newNim" placeholder="Masukkan NIM" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="newNama">Nama:</label>
+                            <input type="text" id="newNama" placeholder="Masukkan Nama" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="newJurusan">Jurusan:</label>
+                            <input type="text" id="newJurusan" placeholder="Masukkan Jurusan" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="newEmail">Email:</label>
+                            <input type="email" id="newEmail" placeholder="Masukkan Email" required>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Simpan Data</button>
+                        <button type="button" id="cancelBtn" class="cancel-btn">Batal</button>
+                    </div>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Search and Sort Controls -->
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari berdasarkan NIM atau Nama...">
+                <button id="searchBtn">Cari</button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+            <div class="sort-box">
+                <label>Urutkan berdasarkan:</label>
+                <select id="sortBy">
+                    <option value="nim">NIM</option>
+                    <option value="nama">Nama</option>
+                </select>
+                <select id="sortOrder">
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+                <button id="sortBtn">Urutkan</button>
+            </div>
+        </div>
+
+        <!-- Data Display -->
+        <div class="data-container">
+            <div id="dataDisplay" class="data-display">
+                <!-- Data will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated Background Planets -->
+    <div class="planets-background">
+        <div class="planet planet1"></div>
+        <div class="planet planet2"></div>
+        <div class="planet planet3"></div>
+        <div class="planet planet4"></div>
+        <div class="planet planet5"></div>
+        <div class="planet planet6"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
